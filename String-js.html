@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            String Practice
+        </title>
+    </head>
+    <body>
+   
+        <script>
+            const gameName=new String('Om Namah Shivay, Om Namah Shivay, Har Har Bhole Namaha Shivay ..');
+            console.log(gameName[0]);
+            console.log(gameName.__proto__);
+
+            //convert to upper case and lower case
+            console.log(gameName.toUpperCase());
+            console.log(gameName.toLowerCase());
+
+            //position of a character
+            console.log(gameName.charAt(5));
+
+            //index of a character or a string
+            console.log(gameName.indexOf('Har'));
+
+            //creating substring substring() method. Note that substring method does not allow negative values in param it will start from 0 if neg values are given as param.
+            console.log((gameName.substring(0, 34)).replaceAll(',' , ''));
+
+            //creating substring using slice() method. Note that it allows negative params and if provided with negative params it will start from end.
+            console.log(gameName.slice(3, 32));
+            console.log(gameName.slice(-5, 7));
+
+
+            //convert string to array
+            console.log(gameName.split(' '));
+        </script>
+
+    </body>
+</html>

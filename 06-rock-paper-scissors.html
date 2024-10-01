@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Rock-Paper-Scissor Game
+        </title>
+    </head>
+    <body>
+        <br> <br>
+        <button onclick="
+            totalGame ++;
+        
+            computer=Math.random()*100;
+        
+            if(computer <= 33){
+                console.log('You both got Rock. Its a tie.');
+            }
+            else if(computer >33 && computer <= 66){
+                console.log('Computer Won. It selected Paper.');
+                youLost++;
+            }else{
+                console.log('You won. Computer selected Scissor.');
+                youWon++;
+            }"
+            
+        > Rock </button>
+
+
+
+        <button onclick="
+            totalGame ++;
+
+            computer=Math.random()*100;
+            
+            if(computer <= 33){
+                console.log('You won. Computer selected Rock.');
+                youWon++;
+            }
+            else if(computer >33 && computer <= 66){
+                console.log('You both got Paper. Its a tie.');
+            }else{
+                console.log('You Lost. Computer selected Scissor.');
+                youLost++;
+            }"
+        > Paper </button>
+
+        
+
+        <button onclick="
+            totalGame ++;
+
+            computer=Math.random()*100;
+            
+            if(computer <= 33){
+                console.log('You Lost. Computer selected Rock.');
+                youLost++;
+            }
+            else if(computer >33 && computer <= 66){
+                console.log('You Won. Computer selected Paper.');
+                youWon++;
+            }else{
+                console.log('You both selected Scissor. Its a tie.');
+            }"
+        > Scissor </button>
+
+        <script>
+            let totalGame=0;
+            let youWon=0;
+            let youLost=0;
+
+            console.log('Lets start the game');
+            
+            
+        </script>
+
+        
+    </body>
+</html>

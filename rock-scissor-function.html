@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ROCK PAPER SCISSOR GAME</title>
+        <link rel="stylesheet" href="rock-scissor-function.css">
+    </head>
+
+    <body>
+        <div>
+            <p class="p-heading">ROCK PAPER SCISSOR GAME!</p>
+        </div>
+
+        <div style="margin-left: 200px;
+        margin-top: 100px;">
+            <button class="img-btn" onclick="btnClicked('rock');"> <img src="images/rock-emoji.png"> </button>
+            <button class="img-btn" onclick="btnClicked('paper');"> <img src="images/paper-emoji.png"> </button>
+            <button class="img-btn" onclick="btnClicked('scissor');"> <img src="images/scissors-emoji.png"> </button>
+        </div>
+
+        <div style=" margin-top: 100px; margin-right: 90px; text-align: center; ">
+            <p class="js-winloss p-heading2"></p>
+            <img class="img-result">
+            <img class="img-result">
+            <p class="p-heading2"></p>
+        </div>
+
+        <script src="rock-scissor.js"></script>
+    </body>
+</html>

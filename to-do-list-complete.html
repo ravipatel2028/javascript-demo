@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            TO DO LIST
+        </title>
+        <style>
+                p {
+                    padding: 10px;
+                    margin: 20px;
+                }
+                .list-div {
+                    padding: 10px;
+                    margin: 10px;
+                }
+                .input-list {
+                    padding: 10px;
+                    margin: 10px;
+                }
+                .input-date {
+                    padding: 10px;
+                    margin: 10px;
+                }
+                .date-btn {
+                    padding: 10px;
+                    margin: 10px;
+                    width: 100px;
+                }
+                .list-div-result {
+                    display: grid;
+                    grid-template-columns: 200px 150px 100px;
+                    column-gap		: 10px;
+		            row-gap			: 10px;
+		            align-items		: center;
+                    margin-bottom	: 10px;
+		            align-items	: stretch;
+                    padding: 10px;
+                }
+        </style>
+    </head>
+    <body>
+        <!-- To do list -->
+        <div>
+            <p>TO-DO LIST</p>
+            <div class="list-div">
+                <input  class="input-list  js-input-list" placeholder="what's in your mind ?">
+                <input  class="input-date js-input-date" type="date">
+                <button class="date-btn js-date-btn" onclick="addList();">ADD</button>    
+            </div>
+            <div class="js-result-div">
+
+            </div>
+        </div>
+
+        <script>
+            function addList() {
+                const list_text=document.querySelector('.js-input-list').value;
+                console.log(list_text);
+                const list_date=document.querySelector('.js-input-date').value;
+                console.log(list_date);
+
+                print(list_text, list_date);
+            }
+
+            function print(list_text, list_date){
+                const htmlbody=`<div class="list-div-result">
+                                    <p class="p-list">${list_text} </p>
+                                    <p class="input-date">${list_date} </p>
+                                    <button class="date-btn js-date-btn" onclick="removeList();">DELETE</button>    
+                                </div>`;
+                document.querySelector('.js-result-div').innerHTML=htmlbody;                
+            }
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            DOM
+        </title>
+    </head>
+    <body>
+        
+        <button>Hello</button>
+        
+        <button class="js-button2">Button2</button>
+
+        <script>
+        /*    
+            document.body.innerHTML='Button Removed';
+            document.title='New Title';
+
+            document.body.innerHTML='<button>Good Job!</button>';
+            console.log(document.querySelector('button'));   */
+
+            console.log(document.body);
+            console.log(document.body.innerHTML);
+            document.querySelector('button').innerHTML='Changed';
+            document.querySelector('.js-button2').innerHTML='The text is changed.';
+            document.title='Title changed.';
+            document.body.innerHTML='<p>This paragraph tag removed every '
+                +'button on the page.</p>';
+        </script>
+    </body>
+</html>

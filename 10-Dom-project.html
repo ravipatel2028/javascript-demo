@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            DOM
+        </title>
+        <link rel="stylesheet" href="10-project.css">
+    </head>
+    <body>
+        <p>
+            <strong>YouTube Subscribe Button.</strong>
+        </p>
+
+        <button class="btn" onclick="subscribe_btn();">Subscribe</button>
+
+        <p style="font-size: 20px; font-weight: bold;">
+            Amazon Shipping Calculator
+        </p>
+
+        <input type="text" placeholder="Cost of Order" class="order">
+        <button class="calculateCost" onclick="calc();">calculate</button>
+
+        <p class="total_cost" style="font-size: 20px; font-weight: bold;color:green"></p>
+
+
+        <script>
+            function subscribe_btn() {
+                const getText=document.querySelector('button');
+                //console.log('\n\t' +getText);
+
+                //changing the text of button onclick
+                if(getText.innerHTML === 'Subscribe'){
+                    document.querySelector('button').innerHTML='Subscribed';
+                    //changing color of the button when clicked we need to add another class for css to change color of the button.
+                    getText.classList.add('is-subscribed');
+                }
+                else{
+                    document.querySelector('button').innerHTML='Subscribe';
+                    getText.classList.remove('is-subscribed');
+                }
+
+            }
+
+
+            //calculating cost of the Order!
+            function calc() {
+                let cost=Number(document.querySelector('.order').value);
+                //console.log("Your order is of $"+value);
+                if(cost <= 40){
+                    //console.log('$' + (cost+10));
+                    cost+=10;
+                }
+                document.querySelector('.total_cost').innerHTML=`$${cost}`;
+            }
+
+        </script>
+    </body>
+</html>
